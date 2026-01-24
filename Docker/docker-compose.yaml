@@ -74,7 +74,7 @@ services:
       - ./data:/opt/spark-data
 
   almond:
-    image: almondsh/almond:latest
+    image: almondsh/almond:0.13.31
     container_name: almond
     ports:
       - "8888:8888"

@@ -81,9 +81,12 @@ services:
       - "4040:4040"
     environment:
       - SPARK_MASTER=spark://spark-master:7077
+    command: jupyter lab --ip=0.0.0.0 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
     volumes:
       - ./work:/home/jovyan/work
       - ./cache:/home/jovyan/.cache
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
 # ```
 # almond:
 #   image: almondsh/almond:0.14.0
@@ -92,5 +95,4 @@ services:
 #     jupyter lab --ip=0.0.0.0 --no-browser --allow-root
 #   ports:
 #     - "8888:8888"
-#   environment:
-#     - SPARK_MASTER=spark://spark-master:7077
+

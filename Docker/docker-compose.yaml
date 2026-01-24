@@ -85,8 +85,6 @@ services:
     volumes:
       - ./work:/home/jovyan/work
       - ./cache:/home/jovyan/.cache
-    environment:
-      - SPARK_MASTER=spark://spark-master:7077
 # ```
 # almond:
 #   image: almondsh/almond:0.14.0

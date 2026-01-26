@@ -1,12 +1,11 @@
 object main {
     def main(args: Array[String]): Unit = {
-
         var running = true
         while (running) {
             Thread.sleep(500)
             println("\n\nВыбери задачу:")
             println("1. Приветствие")
-            println("2. Сумма двух чисел")
+            println("2. Сумма чисел")
             println("3. Увеличение списка на 1")
             println("4. Проверка четности")
             println("5. Длина строки")

@@ -14,14 +14,14 @@ object Greeting {
 // Напишите функцию, которая принимает два целых числа и возвращает их сумму.
 
 object Sum {
-    val sum: (Int, Int) => Int = (a, b) => a + b
+    val sum: Seq[Int] => Int = _.sum
     
     def run(): Unit = {
         println("\n Задача 2: Сумма ")
         println("Требуется ввести числа через пробел:")
         val numbers = readLine().split(" ").map(_.toInt)
-        val result = sum(numbers(0), numbers(1))
-        println(s"Сумма ${numbers(0)} + ${numbers(1)} = $result")
+        val result = sum(numbers)
+        println(s"Сумма ${numbers.mkString(" + ")} = $result")
     }
 }
 
@@ -32,7 +32,7 @@ object ListIncrement {
     
     def run(): Unit = {
         println("\n Задача 3: Увеличение списка ")
-        println("Для создания спискаребуется ввести числа через пробел:")
+        println("Для создания списка требуется ввести числа через пробел:")
         val numbers = readLine().split(" ").map(_.toInt)
         val incremented = numbers.map(increment)
         println(s"Исходный список: ${numbers.mkString(", ")}")
@@ -61,14 +61,11 @@ object OddOrNot {
 // Создайте программу, которая принимает строку и выводит её длину.
 
 object StringLength {
-    def getLength(str: String): Int = str.length
-    
     def run(): Unit = {
         println("\n Задача 5: Длина строки ")
         println("Введи строку:")
         val str = readLine()
-        val length = getLength(str)
-        println(s"Длина строки: $length")
+        println(s"Длина строки: $str.length")
     }
 }
 

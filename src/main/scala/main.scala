@@ -1,7 +1,7 @@
 object main extends App {
     // Task1.task1()
 
-    case class Person(name: String, age: Int, weight: Double, isStudent: Boolean)
+    // case class Person(name: String, age: Int, weight: Double, isStudent: Boolean)
 
     val positive = List("yes", "да", "true")
     val negative = List("no", "нет", "false")

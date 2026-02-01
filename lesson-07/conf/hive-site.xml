@@ -48,4 +48,20 @@
     <name>hive.server2.webui.explain.output</name>
     <value>true</value>
   </property>
+  
+  <property>
+    <name>hive.server2.webui.enabled</name>
+    <value>true</value>
+  </property> 
+
+  <property>
+    <name>hive.server2.webui.port</name>
+    <value>10002</value>
+  </property>
+
+  <property>
+    <name>hive.server2.webui.host</name>
+    <value>0.0.0.0</value>
+  </property>
+
 </configuration>

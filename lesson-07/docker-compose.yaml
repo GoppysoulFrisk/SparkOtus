@@ -11,8 +11,8 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - hive-db:/var/lib/postgresql
-      # - hive-db:/var/lib/postgresql/data - может пригодится
+      # - hive-db:/var/lib/postgresql - ошибка старта metastore
+      - hive-db:/var/lib/postgresql/data
     networks:
       - hive
 

@@ -11,8 +11,9 @@ services:
     ports:
       - '5432:5432'
     volumes:
+    - ./postgres/data:/var/lib/postgresql
       # - hive-db:/var/lib/postgresql - ошибка старта metastore
-      - hive-db:/var/lib/postgresql/data
+      # - hive-db:/var/lib/postgresql/data
     networks:
       - hive
 
@@ -33,7 +34,7 @@ services:
     ports:
         - '9083:9083'
     volumes:
-        - warehouse:/opt/hive/data/warehouse
+        - ./warehouse:/opt/hive/data/warehouse
         - ./postgres/postgresql-42.7.3.jar:/opt/hive/lib/postgres.jar
     networks:
       - hive
@@ -56,7 +57,7 @@ services:
       - '10002:10002'
     volumes:
       - ./conf:/hive_custom_conf
-      - warehouse:/opt/hive/data/warehouse
+      - ./warehouse:/opt/hive/data/warehouse
       - ./data:/data
     networks:
       - hive

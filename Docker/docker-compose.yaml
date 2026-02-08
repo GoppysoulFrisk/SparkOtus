@@ -81,6 +81,8 @@ services:
       - "4040:4040"
     environment:
       - SPARK_MASTER=spark://spark-master:7077
+      - NB_UID=1000
+      - NB_GID=1000
     command: jupyter lab --ip=0.0.0.0 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
     volumes:
       - ./work:/home/jovyan/work

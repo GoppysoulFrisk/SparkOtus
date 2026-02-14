@@ -19,6 +19,6 @@ ThisBuild / libraryDependencies ++= Seq(
   // "io.circe"         %% "circe-parser"  % circeVersion
 )
 
-Compile / mainClass := Some("ru.otus.spark.Main")
+Compile / mainClass := Some("ru.otus.spark.KafkaBooksProducer")
 
 javaOptions += "-Dhadoop.security.authentication=none"

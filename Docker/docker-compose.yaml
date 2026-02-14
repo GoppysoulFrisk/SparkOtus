@@ -5,6 +5,7 @@ services:
     ports:
       - "9092:9092"
     environment:
+        CLUSTER_ID: wE8T5xY3QyG0lZx7Jj3qZg==
         KAFKA_PROCESS_ROLES: broker,controller
         KAFKA_NODE_ID: 1
         KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
@@ -16,10 +17,8 @@ services:
         KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
         KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
         KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
-        **KAFKA_AUTO_INIT: "true"**
     volumes:
-      - ./kafka-data:/var/lib/kafka/data   
-        
+      - ./kafka-data:/var/lib/kafka/data
   spark-master:
     image: cluster-apache-spark:3.5.7
     container_name: master

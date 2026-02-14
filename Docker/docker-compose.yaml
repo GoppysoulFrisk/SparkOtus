@@ -19,6 +19,7 @@ services:
         KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
     volumes:
       - ./kafka-data:/var/lib/kafka/data
+
   spark-master:
     image: cluster-apache-spark:3.5.7
     container_name: master

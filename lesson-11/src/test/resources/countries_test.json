@@ -1,0 +1,7 @@
+[
+  {
+    "name": { "common": "Russia" },
+    "borders": ["NOR", "FIN", "EST", "LVA", "LTU", "POL"],
+    "languages": { "rus": "Russian" }
+  }
+]
